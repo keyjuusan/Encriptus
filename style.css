@@ -1,0 +1,95 @@
+*{
+	padding:0;
+	margin: 0;
+}
+
+body{
+	font-family: monospace;
+	font-size:14px;
+	background-color:#3B9AE1;
+}
+
+header{
+	margin: 0 0 0 1em;
+	padding: 1em 0;
+}
+
+main{
+	display: flex;
+}
+
+.encabezado{
+	color:white;
+}
+
+.escritura{
+	display: inline-block;
+	margin: 0 0 0 1em;
+	width: 62%;
+}
+
+.contenedor{
+	width: 90%;
+	height: 350px;
+}
+
+.campoTexto{
+	background-color: white;
+	padding: 1em 0 0 1em;
+	height: 350px;
+	width: 100%;
+	resize: none;
+	border: none;
+	border-radius: 7px;
+	outline: none;
+}
+
+.btnEncript, .btnDsEncript{
+	background-color: #dfdfdf;
+	width: 49%;
+	height: 2em;
+	padding: 8px;
+	border: none;
+	margin:5px 0 0 0 ;
+	font-size: 16px;
+	color: #333;
+	border-radius: 7px;
+	outline: none;
+	cursor: pointer;
+	transition: box-shadow ,background-color, .45s;
+}
+
+.btnCopy{
+	background-color: #dfdfdf;
+	width: 50%;
+	height: 2em;
+	padding: 8px;
+	border: none;
+	margin:5px 0 0 0 ;
+	font-size: 16px;
+	color: #333;
+	border-radius: 7px;
+	outline: none;
+	cursor: pointer;
+	transition: box-shadow ,background-color, .45s;
+}
+
+.btnEncript:hover, .btnDsEncript:hover, .btnCopy:hover{
+	background-color: #efefef;
+	box-shadow: 0px 0px 4px #999;
+}
+
+.visualizacion{
+	width: 30%;
+	height: 350px;
+	
+}
+
+.resultado{
+	background-color: white;
+	margin: 0 1em 0 0;
+	padding: 1em 0 0 1em;
+	width: 90%;
+	height: 100%;
+	border-radius: 7px;
+}
