@@ -9,7 +9,7 @@
 }
 
 body{
-	position: relative;
+	/*display: flex;*/
 	font-family: monospace;
 	font-size:14px;
 	background-color:var(--azul-blanco);
@@ -18,14 +18,13 @@ body{
 
 header{
 	grid-row:1 / 2 ;
-	margin: 1em 1em 0 1em;
+	margin: 1em 5px 0 5px;
 	padding-right: 5px;
 	/*padding: 1em 0;*/
 }
 
 main{
 	display: flex;
-	flex-direction: row;
 	align-items: flex-start;
 	gap: 15% ;
 }
@@ -36,7 +35,7 @@ main{
 .encabezado p{color: #333;font-size:12px;}
 
 .escritura{
-	margin: 1em 1em 0 1em;
+	margin: 1em 5px 0 5px;
 }
 
 .campoTexto{
@@ -52,13 +51,13 @@ main{
 }
 
 .visualizacion{
-	margin: 1em;
+	margin: 5px;
 	
 }
 
 .resultado{
 	border-radius: 7px;
-	padding: 5px 5px 0 5px;
+	padding: 1em 5px 0 5px;
 	height: 400px;
 	width: 97%;
 	resize: none;
@@ -112,22 +111,27 @@ main{
 	
 }
 
+footer{position: relative; margin:7px 7px 0 0;}
+footer p{position: absolute;opacity: .7;right: 0;}
+strong{font-size: 16px;}
+
 
 /*-------------------------------------------------------------------------------------------*/
 /*Resolucion de tablets*/
 /*------------------------------------------------------------------------------------------*/
 
-@media (max-width: 720px) {
+@media only screen and (max-width: 720px) {
 
 header{
-	margin: 1em 1em 0 1em;
+	margin: 1em 5px 0 5px;
 }
 
 main{
-	display: block;
+	flex-direction: column;
 }
+
 .escritura{
-	margin: 1em 1em 0 1em;
+	margin: 1em 5px 0 5px;
 }
 .campoTexto{
 	margin: 0 auto ;
@@ -144,7 +148,7 @@ main{
 
 
 .visualizacion{
-	margin: 1em;
+	margin: 1em 5px 0 5px;
 	
 }
 .resultado{
@@ -171,8 +175,46 @@ main{
 /*Resolucion de telefonos*/
 /*------------------------------------------------------------------------------------------*/
 
-/*@media (max-width: 480px) {
+@media (max-width: 480px) {
+
+.escritura{
+	margin: 1em 5px 0 5px;
+}
+.campoTexto{
+	margin: 0 auto ;
+	background-color: var(--azul-blanco);
+	border-radius: 7px;
+	padding: 5px 5px 0 5px;
+	height: 400px;
+	width: 688px;
+	resize: none;
+	border: none;
+	outline: none;
+	font-size: 16px;
+}
 
 
+.visualizacion{
+	margin: 1em 5px 0 5px;
+	
+}
+.resultado{
+	margin: 0 auto;
+	border-radius: 7px;
+	padding: 5px 5px 0 5px;
+	height: 400px;
+	width: 688px;
+	resize: none;
+	border: none;
+	outline: none;
+}
 
-}*/
+.botones{
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	padding: 0px;
+	gap: 24px;
+}
+
+}
