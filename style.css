@@ -1,107 +1,147 @@
-*{
-	padding:0;
-	margin: 0;
-}
+*{padding: 0;margin: 0;}
 
 :root{
 	--azul: #3B9AE1;
-	--azul-blanco: #c8e3f7;
+	--azul-blanco: #e3f1fb;
 }
 
 body{
-	/*display: flex;*/
+	background-color: var(--azul-blanco);
+	font-size: 14px;
 	font-family: monospace;
-	font-size:14px;
-	background-color:var(--azul-blanco);
-
-}
-
-header{
-	grid-row:1 / 2 ;
-	margin: 1em 5px 0 5px;
-	padding-right: 5px;
-	/*padding: 1em 0;*/
-}
-
-main{
-	display: flex;
-	align-items: flex-start;
-	gap: 15% ;
 }
 
 .encabezado h1{
-	color:var(--azul);
+	color:var(--azul);position: absolute;top: 0px; left: 3%;top: 0.5%; font-size: 30px;
 }
-.encabezado p{color: #333;font-size:12px;}
-
-.escritura{
-	margin: 1em 5px 0 5px;
-}
-
+.encabezado p{color: #333;position: absolute; top: 34px;left: 3%; font-size: 16px; opacity: .65;}
+.encabezado img{position: absolute; left: 70.5%;top: 1.1%;}
 .campoTexto{
 	background-color: var(--azul-blanco);
-	border-radius: 7px;
-	padding: 5px 5px 0 5px;
-	height: 400px;
-	width: 680px;
+	color: var(--azul);
+	position: absolute;
+	width: 50%;
+	height: 50%;
+	left: 3%;
+	top: 15%;
+
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 150%;
 	resize: none;
 	border: none;
 	outline: none;
-	font-size: 16px;
 }
+.campoTexto::placeholder{color: var(--azul);}
 
-.visualizacion{
-	margin: 5px;
-	
+.visualizacion, .inactivo{
+	position: absolute;
+	width: 23%;
+	height: 90%;
+	left: 75%;
+	top: 5%;
+	background: white;
+	box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+	border-radius: 32px;
+	}
+.inactivo{text-align: center;}
+.inactivo img{
+	position: absolute;
+	width: 84%;
+	left: 8%;
+	top: 20%;
+}
+.inactivo h2{
+	position: absolute;
+	width: 84%;
+	left: 8%;
+	top: 63%;
+}
+.inactivo p{
+	position: absolute;
+	width: 84%;
+	left: 8%;
+	top: 74%;
+	font-size: 13px;
 }
 
 .resultado{
-	border-radius: 7px;
-	padding: 1em 5px 0 5px;
-	height: 400px;
-	width: 97%;
+	position: absolute;
+	width: 84.8887%;
+	height: 80%;
+	left: 8%;
+	top: 4%;
+
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 150%;
+
 	resize: none;
 	border: none;
 	outline: none;
 }
+
+.advertencia{
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	left: 3%; 
+	top: 78.5%;
+	width: 290px;
+	height: 20px;
+	font-size: 12px;
+	z-index: 1;
+	gap: 8px;
+	padding: 0;
+}
+
 
 .botones{
 	display: flex;
 	flex-direction: row;
 	align-items: flex-start;
-	width: 688px;
 	padding: 0px;
-	gap: 24px;
+	gap: 4%;
+
+	position: absolute;
+	width: 50%;
+	height: 48px;
+	left: 3%;
+	top: 84.5%;
 }
 
 .btnEncript, .btnDsEncript{
 	background-color: var(--azul-blanco);
-	height: 40px;
-	/*padding: 8px;*/
-	/*margin: 10px 0 0 0 ;*/
 	border: solid var(--azul) 1px;
-	width: 332px;
-	margin:5px 0 0 0 ;
-	font-size: 16px;
-	color: #333;
+	font-size: 18px;
+	color: var(--azul);
 	border-radius: 7px;
 	outline: none;
 	cursor: pointer;
 	transition: box-shadow ,background-color, .45s;
+	width: 48%;
+	height: 100%;
 }
 
 .btnCopy{
-	background-color: var(--azul-blanco);
-	width: 332px;
-	height: 40px;
+	background-color: white;
 	border: solid var(--azul) 1px;
 	margin:5px 0 0 0 ;
-	font-size: 16px;
-	color: #333;
+	font-size: 18px;
+	color: var(--azul);
 	border-radius: 7px;
 	outline: none;
 	cursor: pointer;
 	transition: box-shadow ,background-color .45s;
+
+	position: absolute;
+	width: 84%;
+	height: 48px;
+	left: 8%;
+	right: 8%;
+	top: 85.7%;
 }
 
 .btnEncript:hover, .btnDsEncript:hover, .btnCopy:hover{
@@ -111,8 +151,16 @@ main{
 	
 }
 
-footer{position: relative; margin:7px 7px 0 0;}
-footer p{position: absolute;opacity: .7;right: 0;}
+footer{
+	position: absolute;
+	width: 20%;
+	height: 16px;
+	left: 3%;
+	top: 93%;
+	margin:7px 7px 0 0;
+}
+
+footer p{position: absolute;opacity: .5;font-size: 12px;}
 strong{font-size: 16px;}
 
 
@@ -120,46 +168,45 @@ strong{font-size: 16px;}
 /*Resolucion de tablets*/
 /*------------------------------------------------------------------------------------------*/
 
-@media only screen and (max-width: 720px) {
+@media (max-width: 720px) {
 
-header{
-	margin: 1em 5px 0 5px;
-}
+.encabezado img{position: absolute; left: 92.5%;top: 1.1%;}
 
-main{
-	flex-direction: column;
-}
-
-.escritura{
-	margin: 1em 5px 0 5px;
-}
 .campoTexto{
-	margin: 0 auto ;
 	background-color: var(--azul-blanco);
-	border-radius: 7px;
-	padding: 5px 5px 0 5px;
-	height: 400px;
-	width: 688px;
-	resize: none;
-	border: none;
-	outline: none;
-	font-size: 16px;
+	color: var(--azul);
+	position: absolute;
+	width: 96%;
+	height: 54%;
+	left: 2%;
+	top: 12%;
+}
+.inactivo{height: 15%;}
+.visualizacion{height: 35%;}
+.visualizacion, .inactivo{
+	width: 96%;
+	left: 2%;
+	top: 80%;
+}
+.inactivo img{
+	display: none;
+}
+.inactivo h2{
+	width: 84%;
+	left: 8%;
+	top: 12%;
+	font-size: 18;
+}
+.inactivo p{
+	width: 84%;
+	left: 8%;
+	top: 55%;
+	font-size: 13px;
 }
 
-
-.visualizacion{
-	margin: 1em 5px 0 5px;
-	
-}
-.resultado{
-	margin: 0 auto;
-	border-radius: 7px;
-	padding: 5px 5px 0 5px;
-	height: 400px;
-	width: 688px;
-	resize: none;
-	border: none;
-	outline: none;
+.advertencia{
+	left: 3%; 
+	top: 66%;
 }
 
 .botones{
@@ -167,7 +214,25 @@ main{
 	flex-direction: row;
 	align-items: flex-start;
 	padding: 0px;
-	gap: 24px;
+	gap: 4%;
+
+	position: absolute;
+	width: 94%;
+	height: 48px;
+	left: 3%;
+	top: 70%;
+}
+
+.btnCopy{
+	position: absolute;
+	width: 84%;
+	height: 48px;
+	left: 8%;
+	top: 70%;
+}
+
+footer{
+	display: none;
 }
 
 }
@@ -177,44 +242,25 @@ main{
 
 @media (max-width: 480px) {
 
-.escritura{
-	margin: 1em 5px 0 5px;
-}
-.campoTexto{
-	margin: 0 auto ;
-	background-color: var(--azul-blanco);
-	border-radius: 7px;
-	padding: 5px 5px 0 5px;
-	height: 400px;
-	width: 688px;
-	resize: none;
-	border: none;
-	outline: none;
-	font-size: 16px;
-}
-
-
-.visualizacion{
-	margin: 1em 5px 0 5px;
-	
-}
-.resultado{
-	margin: 0 auto;
-	border-radius: 7px;
-	padding: 5px 5px 0 5px;
-	height: 400px;
-	width: 688px;
-	resize: none;
-	border: none;
-	outline: none;
+.advertencia{
+	top: 57%;
 }
 
 .botones{
-	display: flex;
-	flex-direction: row;
+	display: block;
+	flex-direction: colum;
 	align-items: flex-start;
 	padding: 0px;
-	gap: 24px;
+	gap: 10px;
+	
+	height: 50px;
+	top: 60%;
+}
+
+.btnEncript, .btnDsEncript{
+	width: 100%;
+	left: 3%;
+	margin-top: 10px;
 }
 
 }

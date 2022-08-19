@@ -8,28 +8,41 @@
 </head>
 <body>
 	<header class="encabezado">
+		<img src="img/Alura-icon.svg" alt="alura-icon">
 		<h1>Encriptus</h1>
 		<p>Encripta tu mensaje ahora</p>
 	</header>
-
-	<main>
-		<section class="escritura">
+	<!-- <main> -->
+		
+		<!-- <section class="escritura"> -->
 			<!-- <div class="contenedor"> -->
-			<textarea class="campoTexto" placeholder="Escriba aquí su mensaje..."></textarea>
+				<div class="advertencia">
+				<img src="img/Vector.svg" alt="icono-advertencia">
+				<p>Solo letras minúsculas y sin acentos.</p>
+				</div>
+				<textarea class="campoTexto" spellcheck="false" placeholder="Escriba aquí su mensaje..."></textarea>
 				<div class="botones">
+				
 				<button class="btnEncript">Encriptar</button>
 				<button class="btnDsEncript">Desencriptar</button>
 				</div>
 			<!-- </div> -->
-		</section>
+		<!-- </section> -->
 
 		<!-- <br> -->
 
-		<section class="visualizacion">
+		<div class="visualizacion" hidden>
+
 			<textarea readonly="readonly" class="resultado"></textarea>
 			<button class="btnCopy">Copiar</button>
-		</section> 
-	</main>
+		</div> 
+
+		<div class="inactivo" >
+			<img src="img/Muñeco.svg" alt="imagen-muñeco">
+			<h2>Ningún mensaje fue encontrado</h2>
+			<p>Ingresa el texto que desees encriptar o desencriptar.</p>
+		</div>
+	<!-- </main> -->
 
 	<footer><p>Creado por <strong>Heyker Vargas</strong> </p></footer>
 

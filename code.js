@@ -5,6 +5,8 @@ const btnCopy = document.querySelector(".btnCopy")
 const resultado = document.querySelector(".resultado");
 const textoNormal = document.querySelector(".textoNormal");
 const textoEncriptado = document.querySelector(".textoEncriptado");
+const visualizacion = document.querySelector(".visualizacion");
+const inactivo = document.querySelector(".inactivo");
 
 var datoTexto = [];
 var encriptado = [];
@@ -17,6 +19,8 @@ btnDsEncript.onclick = desEncriptar;
 btnCopy.onclick = copiarTexto;
 
 function encriptar(){
+	visualizacion.removeAttribute("hidden");
+	inactivo.setAttribute("hidden", "true");
 	encriptado.length = 0;
 	datoTexto.length = 0; //resetea el contenido del array.
 	datoTexto = campoTexto.value.split(' ');
@@ -94,6 +98,9 @@ function desTrascripcion(){
 }
 
 function copiarTexto(){
-
 	navigator.clipboard.writeText(resultado.innerHTML);
+}
+
+function ocultarAviso(){
+
 }
