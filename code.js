@@ -1,12 +1,12 @@
-const campoTexto = document.querySelector(".campoTexto");
-const btnEncript = document.querySelector(".btnEncript");
-const btnDsEncript = document.querySelector(".btnDsEncript");
-const btnCopy = document.querySelector(".btnCopy")
-const resultado = document.querySelector(".resultado");
-const textoNormal = document.querySelector(".textoNormal");
-const textoEncriptado = document.querySelector(".textoEncriptado");
-const visualizacion = document.querySelector(".visualizacion");
-const inactivo = document.querySelector(".inactivo");
+const campoTexto = document.querySelector(".textareaBox__campoTexto");
+const btnEncript = document.querySelector(".btn__Encript");
+const btnDsEncript = document.querySelector(".btn__DsEncript");
+const btnCopy = document.querySelector(".visualizacion__btnCopy")
+const resultado = document.querySelector(".visualizacion__resultado");
+// const textoNormal = document.querySelector(".textoNormal");
+// const textoEncriptado = document.querySelector(".textoEncriptado");
+const visualizacion = document.querySelector(".principal__visualizacion");
+const inactivo = document.querySelector(".principal__inactivo");
 
 var datoTexto = [];
 var encriptado = [];
@@ -18,9 +18,16 @@ btnEncript.onclick = encriptar;
 btnDsEncript.onclick = desEncriptar;
 btnCopy.onclick = copiarTexto;
 
+campoTexto.addEventListener("keyup", ()=>{
+	if (campoTexto.value == '') {
+		inactivo.style.display = "flex";
+		visualizacion.style.display = "none";
+	}
+});
+
 function encriptar(){
-	visualizacion.removeAttribute("hidden");
-	inactivo.setAttribute("hidden", "true");
+	visualizacion.style.display = "flex";
+	inactivo.style.display = "none";
 	encriptado.length = 0;
 	datoTexto.length = 0; //resetea el contenido del array.
 	datoTexto = campoTexto.value.split(' ');

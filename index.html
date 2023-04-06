@@ -1,51 +1,58 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="style.css"/>
+	<link rel="stylesheet" type="text/css" href="style.css" />
 	<title>Encriptus</title>
 </head>
+
 <body>
 	<header class="encabezado">
-		<img src="img/Alura-icon.svg" alt="alura-icon">
 		<h1>Encriptus</h1>
 		<p>Encripta tu mensaje ahora</p>
 	</header>
-	<!-- <main> -->
-		
-		<!-- <div class="escritura"> -->
-			<!-- <div class="contenedor"> -->
-				<div class="advertencia">
-				<img src="img/Vector.svg" alt="icono-advertencia">
-				<p>Solo letras minúsculas y sin acentos.</p>
-				</div>
-				<textarea class="campoTexto" spellcheck="false" placeholder="Escriba aquí su mensaje..."></textarea>
-				<div class="botones">
+	<main class="principal">
+
+		<section class="principal__escritura">
+			<div class="escritura__textareaBox">
+				<textarea class="textareaBox__campoTexto" spellcheck="false"
+					placeholder="Escriba aquí su mensaje..."></textarea>
 				
-				<button class="btnEncript">Encriptar</button>
-				<button class="btnDsEncript">Desencriptar</button>
+				<div>
+					<div class="textareaBox__advertencia">
+						<img src="img/Vector.svg" alt="icono-advertencia">
+						<p>Solo letras minúsculas y sin acentos.</p>
+					</div>
+					<div class="escritura__btns">
+						<button class="btn__Encript">Encriptar</button>
+						<button class="btn__DsEncript">Desencriptar</button>
+					</div>
 				</div>
-			<!-- </div> -->
-		<!-- </div> -->
+			</div>
 
-		<!-- <br> -->
 
-		<div class="visualizacion" hidden>
+		</section>
 
-			<textarea readonly="readonly" class="resultado"></textarea>
-			<button class="btnCopy">Copiar</button>
-		</div> 
+		<section class="principal__visualizacion" style="display: none;">
+			<textarea class="visualizacion__resultado" readonly="readonly"></textarea>
+			<button class="visualizacion__btnCopy">Copiar</button>
+		</section>
 
-		<div class="inactivo" >
-			<img src="img/Muñeco.svg" alt="imagen-muñeco">
-			<h2>Ningún mensaje fue encontrado</h2>
-			<p>Ingresa el texto que desees encriptar o desencriptar.</p>
-		</div>
-	<!-- </main> -->
+		<section class="principal__inactivo">
+			<img class="inactivo__img" src="img/Muñeco.svg" alt="imagen-muñeco">
+			<h2 class="inactivo__h2">Ningún mensaje fue encontrado</h2>
+			<p class="inactivo__p">Ingresa el texto que desees encriptar o desencriptar.</p>
+		</section>
+	</main>
 
-	<footer><p>Creado por <strong>Heyker Vargas</strong> </p></footer>
+	<footer>
+		<p>Creado por </p>
+		<p><strong>Heyker Vargas</strong> </p>
+	</footer>
 
 	<script src="./code.js"></script>
 </body>
+
 </html>
